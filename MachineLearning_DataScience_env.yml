@@ -1,0 +1,48 @@
+# Create Enviroment
+# macOS
+# 1. Open Terminal
+# 2. 
+# 3. conda env create -f [enviroment list file name].yml #ensure no blank spaces before or after command
+# 4. conda activate ML_DS_env
+# 5. conda list -n ML_DS_env #to check patch version numbers and confirm all packages are installed
+
+# Update Enviroment
+#   Activate Enviroment
+#   Navigate to .yml file location (cd "folder_path")
+#   conda env update -f MachineLearning_DataScience_env.yml --prune
+#
+# Manual install via termial
+# conda install -c conda-forge imbalanced-learn
+
+name: ML_DS_env
+
+channels:
+    - conda-forge
+
+dependencies:
+
+    # conda dependencies
+    # Use single '=' signs!
+
+    ## core packages
+    - python=3.7
+    - pip
+    - jupyter
+    
+    ## data science
+     - pandas
+    - numpy   
+    - matplotlib
+    - seaborn
+    - pickle5
+
+    ## Machine Learning
+    - scikit-learn
+    - imbalanced-learn
+
+    - pip:
+        #- put packages here
+          # pip requirements
+          # Use double '==' signs!
+
+          # Change version number suffix @x.y.z to version you want to use!}
